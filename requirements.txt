@@ -1,9 +1,18 @@
+# FIX #8: Dipendenze aggiornate per sicurezza e compatibilità
+# Audio capture e UI
 pyaudio==0.2.14
 PyQt5==5.15.10
-openai-whisper==20231117
-torch==2.1.0
-torchaudio==2.1.0
-numpy==1.24.3
 sounddevice==0.4.6
-scipy==1.11.4
-gpt4all==2.0.2
+
+# AI/ML - Versioni aggiornate per sicurezza
+# Nota: torch 2.4+ risolve CVE-2024-31580, CVE-2024-27322
+torch>=2.4.0
+torchaudio>=2.4.0
+openai-whisper>=20231117
+
+# Calcolo scientifico - Versioni aggiornate
+numpy>=1.26.0,<2.0.0
+scipy>=1.13.0
+
+# LLM locale
+gpt4all>=2.5.0
