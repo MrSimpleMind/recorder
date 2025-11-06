@@ -4,13 +4,13 @@ echo Creazione EXE Standalone
 echo =====================================
 echo.
 
-REM Verifica che l'app funzioni prima
+REM FIX #6: Verifica che l'app funzioni prima con --version corretto
 echo [1/4] Verifica app funzionante...
-python recorder_app.py --version >nul 2>&1
+python recorder_app.py --version
 if errorlevel 1 (
     echo.
     echo [!] L'app non funziona correttamente
-    echo Prima testa con: python recorder_app.py
+    echo Prima testa con: python recorder_app.py --version
     echo.
     pause
     exit /b 1
